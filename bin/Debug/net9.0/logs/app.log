@@ -1,0 +1,4 @@
+2025-09-09 17:10:57.6207|ERROR|Microsoft.Extensions.Hosting.Internal.Host|Hosting failed to start
+2025-09-09 17:10:57.6304|ERROR|QrBankApi.Program|Stopped program because of exception
+2025-09-12 11:06:51.6681|ERROR|Microsoft.Extensions.Hosting.Internal.Host|Hosting failed to start
+2025-09-12 11:06:51.6782|ERROR|QrBankApi.Program|Stopped program because of exception
