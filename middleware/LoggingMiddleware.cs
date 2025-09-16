@@ -21,10 +21,15 @@ namespace QrBankApi.Middlewares
         {
             try
             {
-                // 🟢 1️⃣ Request logla (Method + Path)
+                // 🔑 JWT'den kullanıcı adı (varsa)
+                string username = context.User?.Identity?.IsAuthenticated == true
+                    ? context.User.Identity?.Name ?? "unknown"
+                    : "anonymous";
+                _logger.LogInformation($"[USER] {username}");
+                // Request logla (Method + Path)
                 _logger.LogInformation($"[REQUEST] {context.Request.Method} {context.Request.Path}");
 
-                // 🟢 2️⃣ Request Body'yi oku ve logla
+                // Request Body'yi oku ve logla
                 if (context.Request.Method == HttpMethods.Post || context.Request.Method == HttpMethods.Put)
                 {
                     // Request body'yi yeniden okunabilir hale getirmek için buffering açıyoruz
@@ -44,12 +49,12 @@ namespace QrBankApi.Middlewares
 
                 await _next(context);
 
-                // 🟢 3️⃣ Response logla (StatusCode)
+                // Response logla (StatusCode)
                 _logger.LogInformation($"[RESPONSE] Status: {context.Response.StatusCode}");
             }
             catch (Exception ex)
             {
-                // 🔴 Hata logla
+                // Hata logla
                 _logger.LogError(ex, $"[ERROR] {ex.Message}");
 
                 var response = new BaseResponse

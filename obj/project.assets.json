@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net9.0": {
-      "FluentValidation/11.11.0": {
+      "FluentValidation/12.0.0": {
         "type": "package",
         "compile": {
           "lib/net8.0/FluentValidation.dll": {
@@ -35,24 +35,24 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "FluentValidation.DependencyInjectionExtensions/11.11.0": {
+      "FluentValidation.DependencyInjectionExtensions/12.0.0": {
         "type": "package",
         "dependencies": {
-          "FluentValidation": "11.11.0",
+          "FluentValidation": "12.0.0",
           "Microsoft.Extensions.Dependencyinjection.Abstractions": "2.1.0"
         },
         "compile": {
-          "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {
+          "lib/net8.0/FluentValidation.DependencyInjectionExtensions.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {
+          "lib/net8.0/FluentValidation.DependencyInjectionExtensions.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.Authentication.JwtBearer/9.0.8": {
+      "Microsoft.AspNetCore.Authentication.JwtBearer/9.0.9": {
         "type": "package",
         "dependencies": {
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "8.0.1"
@@ -488,29 +488,19 @@
     }
   },
   "libraries": {
-    "FluentValidation/11.11.0": {
-      "sha512": "cyIVdQBwSipxWG8MA3Rqox7iNbUNUTK5bfJi9tIdm4CAfH71Oo5ABLP4/QyrUwuakqpUEPGtE43BDddvEehuYw==",
+    "FluentValidation/12.0.0": {
+      "sha512": "8NVLxtMUXynRHJIX3Hn1ACovaqZIJASufXIIFkD0EUbcd5PmMsL1xUD5h548gCezJ5BzlITaR9CAMrGe29aWpA==",
       "type": "package",
-      "path": "fluentvalidation/11.11.0",
+      "path": "fluentvalidation/12.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "fluent-validation-icon.png",
-        "fluentvalidation.11.11.0.nupkg.sha512",
+        "fluentvalidation.12.0.0.nupkg.sha512",
         "fluentvalidation.nuspec",
-        "lib/net5.0/FluentValidation.dll",
-        "lib/net5.0/FluentValidation.xml",
-        "lib/net6.0/FluentValidation.dll",
-        "lib/net6.0/FluentValidation.xml",
-        "lib/net7.0/FluentValidation.dll",
-        "lib/net7.0/FluentValidation.xml",
         "lib/net8.0/FluentValidation.dll",
-        "lib/net8.0/FluentValidation.xml",
-        "lib/netstandard2.0/FluentValidation.dll",
-        "lib/netstandard2.0/FluentValidation.xml",
-        "lib/netstandard2.1/FluentValidation.dll",
-        "lib/netstandard2.1/FluentValidation.xml"
+        "lib/net8.0/FluentValidation.xml"
       ]
     },
     "FluentValidation.AspNetCore/11.3.1": {
@@ -532,27 +522,25 @@
         "lib/netcoreapp3.1/FluentValidation.AspNetCore.xml"
       ]
     },
-    "FluentValidation.DependencyInjectionExtensions/11.11.0": {
-      "sha512": "viTKWaMbL3yJYgGI0DiCeavNbE9UPMWFVK2XS9nYXGbm3NDMd0/L5ER4wBzmTtW3BYh3SrlSXm9RACiKZ6stlA==",
+    "FluentValidation.DependencyInjectionExtensions/12.0.0": {
+      "sha512": "B28fBRL1UjhGsBC8fwV6YBZosh+SiU1FxdD7l7p5dGPgRlVI7UnM+Lgzmg+unZtV1Zxzpaw96UY2MYfMaAd8cg==",
       "type": "package",
-      "path": "fluentvalidation.dependencyinjectionextensions/11.11.0",
+      "path": "fluentvalidation.dependencyinjectionextensions/12.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "fluent-validation-icon.png",
-        "fluentvalidation.dependencyinjectionextensions.11.11.0.nupkg.sha512",
+        "fluentvalidation.dependencyinjectionextensions.12.0.0.nupkg.sha512",
         "fluentvalidation.dependencyinjectionextensions.nuspec",
-        "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll",
-        "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.xml",
-        "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll",
-        "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.xml"
+        "lib/net8.0/FluentValidation.DependencyInjectionExtensions.dll",
+        "lib/net8.0/FluentValidation.DependencyInjectionExtensions.xml"
       ]
     },
-    "Microsoft.AspNetCore.Authentication.JwtBearer/9.0.8": {
-      "sha512": "pEuE/xaXHk2Rr2YiTraS7i2MNoTXSnX79VlJcdKx9MczrhDfBO4tHdF4HWOo542WPbjSeZx2PFjmHygo0XnK3Q==",
+    "Microsoft.AspNetCore.Authentication.JwtBearer/9.0.9": {
+      "sha512": "U5gW2DS/yAE9X0Ko63/O2lNApAzI/jhx4IT1Th6W0RShKv6XAVVgLGN3zqnmcd6DtAnp5FYs+4HZrxsTl0anLA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.authentication.jwtbearer/9.0.8",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/9.0.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -561,7 +549,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll",
         "lib/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.xml",
-        "microsoft.aspnetcore.authentication.jwtbearer.9.0.8.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.jwtbearer.9.0.9.nupkg.sha512",
         "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
       ]
     },
@@ -1463,7 +1451,8 @@
   "projectFileDependencyGroups": {
     "net9.0": [
       "FluentValidation.AspNetCore >= 11.3.1",
-      "Microsoft.AspNetCore.Authentication.JwtBearer >= 9.0.8",
+      "FluentValidation.DependencyInjectionExtensions >= 12.0.0",
+      "Microsoft.AspNetCore.Authentication.JwtBearer >= 9.0.9",
       "Microsoft.AspNetCore.OpenApi >= 9.0.8",
       "NLog.Web.AspNetCore >= 6.0.3",
       "Newtonsoft.Json >= 13.0.3",
@@ -1518,9 +1507,13 @@
             "target": "Package",
             "version": "[11.3.1, )"
           },
+          "FluentValidation.DependencyInjectionExtensions": {
+            "target": "Package",
+            "version": "[12.0.0, )"
+          },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
-            "version": "[9.0.8, )"
+            "version": "[9.0.9, )"
           },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",

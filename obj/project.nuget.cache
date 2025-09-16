@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "3VsIfd9FG50=",
+  "dgSpecHash": "vxLHmzfGaF8=",
   "success": true,
   "projectFilePath": "/Users/selinan/MyProject/MyProject.csproj",
   "expectedPackageFiles": [
-    "/Users/selinan/.nuget/packages/fluentvalidation/11.11.0/fluentvalidation.11.11.0.nupkg.sha512",
+    "/Users/selinan/.nuget/packages/fluentvalidation/12.0.0/fluentvalidation.12.0.0.nupkg.sha512",
     "/Users/selinan/.nuget/packages/fluentvalidation.aspnetcore/11.3.1/fluentvalidation.aspnetcore.11.3.1.nupkg.sha512",
-    "/Users/selinan/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.11.0/fluentvalidation.dependencyinjectionextensions.11.11.0.nupkg.sha512",
-    "/Users/selinan/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/9.0.8/microsoft.aspnetcore.authentication.jwtbearer.9.0.8.nupkg.sha512",
+    "/Users/selinan/.nuget/packages/fluentvalidation.dependencyinjectionextensions/12.0.0/fluentvalidation.dependencyinjectionextensions.12.0.0.nupkg.sha512",
+    "/Users/selinan/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/9.0.9/microsoft.aspnetcore.authentication.jwtbearer.9.0.9.nupkg.sha512",
     "/Users/selinan/.nuget/packages/microsoft.aspnetcore.openapi/9.0.8/microsoft.aspnetcore.openapi.9.0.8.nupkg.sha512",
     "/Users/selinan/.nuget/packages/microsoft.extensions.apidescription.server/9.0.0/microsoft.extensions.apidescription.server.9.0.0.nupkg.sha512",
     "/Users/selinan/.nuget/packages/microsoft.extensions.configuration.abstractions/8.0.0/microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",

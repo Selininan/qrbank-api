@@ -1,14 +1,17 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using QrBankApi.Helpers;
-using System;
-using QrBankApi.Models;
 using Newtonsoft.Json.Linq;
+using QrBankApi.Helpers;
+using QrBankApi.Models;
 using QrBankApi.Services.Abstractions;
+using System;
+using System.Linq;
 
 namespace QrBankApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize] // Controller düzeyinde default olarak token gerekli
     public class QrCodeController : ControllerBase
     {
         private readonly IQrService _qrService;
@@ -21,22 +24,45 @@ namespace QrBankApi.Controllers
         }
 
         [HttpPost("generate")]
+        [AllowAnonymous] // Token varsa kontrol edilecek, yoksa anonymous
         public IActionResult GenerateQr([FromBody] QrGenerateRequest request)
         {
-            if (request is null)
+            // Kullanıcı adı ve rol kontrolü
+            var username = User.Identity?.IsAuthenticated == true ? User.Identity.Name : "anonymous";
+            var isAdmin = User.Identity?.IsAuthenticated == true && User.IsInRole("Admin");
+
+            // Request null mu kontrol
+            if (request == null)
+            {
                 return BadRequest(new QrGenerateResponse
                 {
                     ResponseCode = "400",
                     ResponseDescription = "Geçersiz istek"
                 });
+            }
+
+            // FluentValidation hatalarını kontrol
+            if (!ModelState.IsValid)
+            {
+                var errors = ModelState.Values
+                    .SelectMany(v => v.Errors)
+                    .Select(e => e.ErrorMessage)
+                    .ToList();
+
+                return BadRequest(new QrGenerateResponse
+                {
+                    ResponseCode = "400",
+                    ResponseDescription = string.Join(" | ", errors)
+                });
+            }
 
             try
             {
                 // Request loglama
                 var requestJson = JObject.FromObject(request);
-                Console.WriteLine($"[GenerateQr] Request JSON: {requestJson}");
+                Console.WriteLine($"[GenerateQr] Kullanıcı: {username} - Admin mi: {isAdmin} - Request: {requestJson}");
 
-                // Servisten QR kodu üret
+                // QR kodu üret
                 string qrCode = _qrService.Generate(request);
 
                 if (string.IsNullOrWhiteSpace(qrCode))
@@ -48,7 +74,6 @@ namespace QrBankApi.Controllers
                     });
                 }
 
-                // Response objesi oluştur
                 var response = new QrGenerateResponse
                 {
                     ResponseCode = "200",
@@ -72,5 +97,4 @@ namespace QrBankApi.Controllers
         }
     }
 }
-
 
