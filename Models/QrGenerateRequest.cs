@@ -1,16 +1,18 @@
 using FluentValidation;
+using Newtonsoft.Json;
 using System.Linq;
 
 namespace QrBankApi.Models
 {
-    // Request Model
     public class QrGenerateRequest
     {
-        public string BankCode { get; set; } = string.Empty;
-        public string AtmCode { get; set; } = string.Empty;
+        [JsonProperty("AtmCode")]
+        public string AtmCode { get; set; }
+
+        [JsonProperty("BankCode")]
+        public string BankCode { get; set; }
     }
 
-    // Validator
     public class QrGenerateRequestValidator : AbstractValidator<QrGenerateRequest>
     {
         // Geçerli banka kodları
@@ -18,18 +20,15 @@ namespace QrBankApi.Models
 
         public QrGenerateRequestValidator()
         {
-            // ATM kodu en fazla 6 haneli olmalı
             RuleFor(x => x.AtmCode)
                 .Length(6)
                 .WithMessage("ATM kodu maksimum 6 haneli olmalıdır.");
 
-            // Banka kodu geçerli mi kontrolü
             RuleFor(x => x.BankCode)
                 .Must(code => ValidBankCodes.Contains(code))
                 .WithMessage("Geçersiz banka kodu. Geçerli kodlar: 980015, 980020, 980013, 980017.");
         }
     }
 }
-
 
 

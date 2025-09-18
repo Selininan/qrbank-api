@@ -594,3 +594,453 @@
 2025-09-16 14:45:13.2043|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/SWAGGER/index.html - 200 - text/html;charset=utf-8 58.5995ms
 2025-09-16 14:45:13.3929|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - - -
 2025-09-16 14:45:13.4767|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 83.8202ms
+2025-09-16 15:09:09.1655|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using '/Users/selinan/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-09-16 15:09:09.4258|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7239
+2025-09-16 15:09:09.4258|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5233
+2025-09-16 15:09:09.4290|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-09-16 15:09:09.4296|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2025-09-16 15:09:09.4296|INFO|Microsoft.Hosting.Lifetime|Content root path: /Users/selinan/MyProject
+2025-09-16 15:09:15.2689|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7239/SWAGGER/index.html - - -
+2025-09-16 15:09:15.3221|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/SWAGGER/index.html - 200 - text/html;charset=utf-8 51.3375ms
+2025-09-16 15:09:15.7682|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - - -
+2025-09-16 15:09:15.8234|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 55.1941ms
+2025-09-16 15:22:10.0748|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using '/Users/selinan/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-09-16 15:22:10.2663|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7239
+2025-09-16 15:22:10.2663|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5233
+2025-09-16 15:22:10.2690|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-09-16 15:22:10.2695|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2025-09-16 15:22:10.2695|INFO|Microsoft.Hosting.Lifetime|Content root path: /Users/selinan/MyProject
+2025-09-16 15:22:18.0426|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7239/api/QrCode/generate - application/json 54
+2025-09-16 15:22:18.0912|INFO|QrBankApi.Middlewares.LoggingMiddleware|[USER] anonymous
+2025-09-16 15:22:18.0912|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST] POST /api/QrCode/generate
+2025-09-16 15:22:18.0935|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST BODY] {
+    "bankCode": "980015",
+    "atmCode": "123456"
+}
+
+2025-09-16 15:22:18.0964|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject)'
+2025-09-16 15:22:18.1061|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GenerateQr", controller = "QrCode"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GenerateQr(QrBankApi.Models.QrGenerateRequest) on controller QrBankApi.Controllers.QrCodeController (MyProject).
+2025-09-16 15:22:18.1683|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'QrBankApi.Models.QrGenerateResponse'.
+2025-09-16 15:22:18.1784|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject) in 64.2275ms
+2025-09-16 15:22:18.1784|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject)'
+2025-09-16 15:22:18.1784|INFO|QrBankApi.Middlewares.LoggingMiddleware|[RESPONSE] Status: 200
+2025-09-16 15:22:18.1823|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7239/api/QrCode/generate - 200 - application/json;+charset=utf-8 140.7786ms
+2025-09-16 15:29:17.2172|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7239/api/QrCode/generate - application/json 54
+2025-09-16 15:29:17.2296|INFO|QrBankApi.Middlewares.LoggingMiddleware|[USER] anonymous
+2025-09-16 15:29:17.2296|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST] POST /api/QrCode/generate
+2025-09-16 15:29:17.2296|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST BODY] {
+    "bankCode": "980015",
+    "atmCode": "123456"
+}
+
+2025-09-16 15:29:17.2316|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject)'
+2025-09-16 15:29:17.2359|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GenerateQr", controller = "QrCode"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GenerateQr(QrBankApi.Models.QrGenerateRequest) on controller QrBankApi.Controllers.QrCodeController (MyProject).
+2025-09-16 15:29:17.2430|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'QrBankApi.Models.QrGenerateResponse'.
+2025-09-16 15:29:17.2437|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject) in 7.6494ms
+2025-09-16 15:29:17.2437|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject)'
+2025-09-16 15:29:17.2437|INFO|QrBankApi.Middlewares.LoggingMiddleware|[RESPONSE] Status: 200
+2025-09-16 15:29:17.2447|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7239/api/QrCode/generate - 200 - application/json;+charset=utf-8 27.6515ms
+2025-09-16 15:39:09.1096|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using '/Users/selinan/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-09-16 15:39:09.3219|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7239
+2025-09-16 15:39:09.3219|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5233
+2025-09-16 15:39:09.3249|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-09-16 15:39:09.3255|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2025-09-16 15:39:09.3255|INFO|Microsoft.Hosting.Lifetime|Content root path: /Users/selinan/MyProject
+2025-09-16 15:47:12.2917|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using '/Users/selinan/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-09-16 15:47:12.4702|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7239
+2025-09-16 15:47:12.4702|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5233
+2025-09-16 15:47:12.4738|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-09-16 15:47:12.4743|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2025-09-16 15:47:12.4743|INFO|Microsoft.Hosting.Lifetime|Content root path: /Users/selinan/MyProject
+2025-09-16 15:47:17.0100|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7239/api/QrCode/generate - application/json 54
+2025-09-16 15:47:17.0562|INFO|QrBankApi.Middlewares.LoggingMiddleware|[USER] anonymous
+2025-09-16 15:47:17.0562|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST] POST /api/QrCode/generate
+2025-09-16 15:47:17.0586|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST BODY] {
+    "bankCode": "980015",
+    "atmCode": "123456"
+}
+
+2025-09-16 15:47:17.0608|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject)'
+2025-09-16 15:47:17.0721|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GenerateQr", controller = "QrCode"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GenerateQr(QrBankApi.Models.QrGenerateRequest) on controller QrBankApi.Controllers.QrCodeController (MyProject).
+2025-09-16 15:47:17.1360|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'QrBankApi.Models.QrGenerateResponse'.
+2025-09-16 15:47:17.1561|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject) in 75.466ms
+2025-09-16 15:47:17.1561|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject)'
+2025-09-16 15:47:17.1561|INFO|QrBankApi.Middlewares.LoggingMiddleware|[RESPONSE] Status: 200
+2025-09-16 15:47:17.1593|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7239/api/QrCode/generate - 200 137 application/json;+charset=utf-8 150.8507ms
+2025-09-16 16:15:14.0276|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7239/api/QrCode/generate - application/json 54
+2025-09-16 16:15:14.0435|INFO|QrBankApi.Middlewares.LoggingMiddleware|[USER] anonymous
+2025-09-16 16:15:14.0435|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST] POST /api/QrCode/generate
+2025-09-16 16:15:14.0435|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST BODY] {
+    "bankCode": "980015",
+    "atmCode": "123456"
+}
+
+2025-09-16 16:15:14.0456|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject)'
+2025-09-16 16:15:14.0507|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GenerateQr", controller = "QrCode"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GenerateQr(QrBankApi.Models.QrGenerateRequest) on controller QrBankApi.Controllers.QrCodeController (MyProject).
+2025-09-16 16:15:14.0641|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'QrBankApi.Models.QrGenerateResponse'.
+2025-09-16 16:15:14.0663|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject) in 15.0899ms
+2025-09-16 16:15:14.0663|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject)'
+2025-09-16 16:15:14.0663|INFO|QrBankApi.Middlewares.LoggingMiddleware|[RESPONSE] Status: 200
+2025-09-16 16:15:14.0681|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7239/api/QrCode/generate - 200 137 application/json;+charset=utf-8 41.3423ms
+2025-09-16 16:16:24.7112|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7239/api/auth/token - application/json 59
+2025-09-16 16:16:24.7166|INFO|QrBankApi.Middlewares.LoggingMiddleware|[USER] anonymous
+2025-09-16 16:16:24.7167|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST] POST /api/auth/token
+2025-09-16 16:16:24.7167|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST BODY] {
+    "username" : "celine",
+    "password": "celine123"
+}
+
+2025-09-16 16:16:24.7201|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'QrBankApi.Controllers.AuthController.GetToken (MyProject)'
+2025-09-16 16:16:24.7280|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetToken", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetToken(QrBankApi.Models.LoginRequest) on controller QrBankApi.Controllers.AuthController (MyProject).
+2025-09-16 16:16:24.7714|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type '<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-16 16:16:24.7806|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action QrBankApi.Controllers.AuthController.GetToken (MyProject) in 52.4742ms
+2025-09-16 16:16:24.7808|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'QrBankApi.Controllers.AuthController.GetToken (MyProject)'
+2025-09-16 16:16:24.7808|INFO|QrBankApi.Middlewares.LoggingMiddleware|[RESPONSE] Status: 200
+2025-09-16 16:16:24.7808|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7239/api/auth/token - 200 416 application/json;+charset=utf-8 69.8035ms
+2025-09-16 16:17:27.0396|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7239/api/QrCode/generate - application/json 59
+2025-09-16 16:17:27.0841|INFO|Program|JWT validasyonu başarılı: celine
+2025-09-16 16:17:27.0850|INFO|QrBankApi.Middlewares.LoggingMiddleware|[USER] celine
+2025-09-16 16:17:27.0850|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST] POST /api/QrCode/generate
+2025-09-16 16:17:27.0850|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST BODY] {
+    "username" : "celine",
+    "password": "celine123"
+}
+
+2025-09-16 16:17:27.0878|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject)'
+2025-09-16 16:17:27.0885|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GenerateQr", controller = "QrCode"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GenerateQr(QrBankApi.Models.QrGenerateRequest) on controller QrBankApi.Controllers.QrCodeController (MyProject).
+2025-09-16 16:17:27.1017|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-09-16 16:17:27.1163|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject) in 27.6402ms
+2025-09-16 16:17:27.1163|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject)'
+2025-09-16 16:17:27.1163|INFO|QrBankApi.Middlewares.LoggingMiddleware|[RESPONSE] Status: 400
+2025-09-16 16:17:27.1163|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7239/api/QrCode/generate - 400 368 application/problem+json;+charset=utf-8 76.9968ms
+2025-09-16 16:44:43.0414|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using '/Users/selinan/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-09-16 16:44:43.2401|ERROR|Microsoft.Extensions.Hosting.Internal.Host|Hosting failed to start
+2025-09-16 16:46:01.3174|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using '/Users/selinan/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-09-16 16:46:01.5044|ERROR|Microsoft.Extensions.Hosting.Internal.Host|Hosting failed to start
+2025-09-16 16:46:26.0181|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using '/Users/selinan/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-09-16 16:46:26.1841|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7239
+2025-09-16 16:46:26.1841|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5233
+2025-09-16 16:46:26.1870|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-09-16 16:46:26.1874|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2025-09-16 16:46:26.1874|INFO|Microsoft.Hosting.Lifetime|Content root path: /Users/selinan/MyProject
+2025-09-16 16:46:41.8785|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7239/api/QrCode/generate - application/json 59
+2025-09-16 16:46:41.9457|INFO|Program|JWT validasyonu başarılı: celine
+2025-09-16 16:46:41.9470|INFO|QrBankApi.Middlewares.LoggingMiddleware|[USER] celine
+2025-09-16 16:46:41.9470|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST] POST /api/QrCode/generate
+2025-09-16 16:46:41.9496|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST BODY] {
+    "username" : "celine",
+    "password": "celine123"
+}
+
+2025-09-16 16:46:41.9522|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject)'
+2025-09-16 16:46:41.9667|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GenerateQr", controller = "QrCode"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GenerateQr(QrBankApi.Models.QrGenerateRequest) on controller QrBankApi.Controllers.QrCodeController (MyProject).
+2025-09-16 16:46:42.0280|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-09-16 16:46:42.0607|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject) in 83.4186ms
+2025-09-16 16:46:42.0607|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject)'
+2025-09-16 16:46:42.0609|INFO|QrBankApi.Middlewares.LoggingMiddleware|[RESPONSE] Status: 400
+2025-09-16 16:46:42.0637|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7239/api/QrCode/generate - 400 368 application/problem+json;+charset=utf-8 186.3745ms
+2025-09-16 16:50:24.3846|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7239/api/QrCode/generate - application/json 59
+2025-09-16 16:50:24.3933|INFO|QrBankApi.Middlewares.LoggingMiddleware|[USER] anonymous
+2025-09-16 16:50:24.3933|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST] POST /api/QrCode/generate
+2025-09-16 16:50:24.3945|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST BODY] {
+    "username" : "celine",
+    "password": "celine123"
+}
+
+2025-09-16 16:50:24.3976|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-09-16 16:50:24.4042|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was challenged.
+2025-09-16 16:50:24.4042|INFO|QrBankApi.Middlewares.LoggingMiddleware|[RESPONSE] Status: 401
+2025-09-16 16:50:24.4060|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7239/api/QrCode/generate - 401 0 - 21.2456ms
+2025-09-16 16:50:31.8909|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7239/api/auth/token - application/json 59
+2025-09-16 16:50:31.8967|INFO|QrBankApi.Middlewares.LoggingMiddleware|[USER] anonymous
+2025-09-16 16:50:31.8967|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST] POST /api/auth/token
+2025-09-16 16:50:31.8967|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST BODY] {
+    "username" : "celine",
+    "password": "celine123"
+}
+
+2025-09-16 16:50:31.8967|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'QrBankApi.Controllers.AuthController.GetToken (MyProject)'
+2025-09-16 16:50:31.9099|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetToken", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetToken(QrBankApi.Models.LoginRequest) on controller QrBankApi.Controllers.AuthController (MyProject).
+2025-09-16 16:50:31.9507|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type '<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-16 16:50:31.9594|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action QrBankApi.Controllers.AuthController.GetToken (MyProject) in 49.3585ms
+2025-09-16 16:50:31.9594|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'QrBankApi.Controllers.AuthController.GetToken (MyProject)'
+2025-09-16 16:50:31.9596|INFO|QrBankApi.Middlewares.LoggingMiddleware|[RESPONSE] Status: 200
+2025-09-16 16:50:31.9596|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7239/api/auth/token - 200 416 application/json;+charset=utf-8 68.8606ms
+2025-09-16 16:51:31.4688|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7239/api/QrCode/generate - application/json 54
+2025-09-16 16:51:31.4750|INFO|Program|JWT validasyonu başarılı: celine
+2025-09-16 16:51:31.4801|INFO|QrBankApi.Middlewares.LoggingMiddleware|[USER] celine
+2025-09-16 16:51:31.4801|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST] POST /api/QrCode/generate
+2025-09-16 16:51:31.4813|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST BODY] {
+    "bankCode": "980015",
+    "atmCode": "123456"
+}
+
+2025-09-16 16:51:31.4873|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject)'
+2025-09-16 16:51:31.4891|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GenerateQr", controller = "QrCode"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GenerateQr(QrBankApi.Models.QrGenerateRequest) on controller QrBankApi.Controllers.QrCodeController (MyProject).
+2025-09-16 16:51:31.5002|INFO|QrBankApi.Controllers.QrCodeController|[GenerateQr] Kullanıcı: celine - Admin mi: True
+2025-09-16 16:51:31.5061|WARN|QrBankApi.Controllers.QrCodeController|[GenerateQr] Geçersiz QR: QR kod formatı geçersiz
+2025-09-16 16:51:31.5061|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'QrBankApi.Models.QrGenerateResponse'.
+2025-09-16 16:51:31.5105|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject) in 21.2006ms
+2025-09-16 16:51:31.5105|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject)'
+2025-09-16 16:51:31.5105|INFO|QrBankApi.Middlewares.LoggingMiddleware|[RESPONSE] Status: 400
+2025-09-16 16:51:31.5109|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7239/api/QrCode/generate - 400 84 application/json;+charset=utf-8 45.1727ms
+2025-09-16 16:57:42.6368|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using '/Users/selinan/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-09-16 16:57:42.8032|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7239
+2025-09-16 16:57:42.8032|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5233
+2025-09-16 16:57:42.8058|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-09-16 16:57:42.8058|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2025-09-16 16:57:42.8058|INFO|Microsoft.Hosting.Lifetime|Content root path: /Users/selinan/MyProject
+2025-09-16 16:57:50.4418|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7239/SWAGGER/index.html - - -
+2025-09-16 16:57:50.4918|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/SWAGGER/index.html - 200 - text/html;charset=utf-8 49.2742ms
+2025-09-16 16:57:50.6708|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - - -
+2025-09-16 16:57:50.6916|INFO|QrBankApi.Middlewares.LoggingMiddleware|[USER] anonymous
+2025-09-16 16:57:50.6916|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST] GET /swagger/v1/swagger.json
+2025-09-16 16:57:50.6916|INFO|QrBankApi.Middlewares.LoggingMiddleware|[RESPONSE] Status: 404
+2025-09-16 16:57:50.6929|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - 404 0 - 22.0100ms
+2025-09-16 16:57:50.6929|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7239/swagger/v1/swagger.json, Response status code: 404
+2025-09-16 16:57:58.1934|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7239/SWAGGER/index.html - - -
+2025-09-16 16:57:58.1946|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/SWAGGER/index.html - 200 - text/html;charset=utf-8 1.1469ms
+2025-09-16 16:57:58.2544|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - - -
+2025-09-16 16:57:58.2572|INFO|QrBankApi.Middlewares.LoggingMiddleware|[USER] anonymous
+2025-09-16 16:57:58.2575|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST] GET /swagger/v1/swagger.json
+2025-09-16 16:57:58.2575|INFO|QrBankApi.Middlewares.LoggingMiddleware|[RESPONSE] Status: 404
+2025-09-16 16:57:58.2575|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - 404 0 - 3.3278ms
+2025-09-16 16:57:58.2575|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7239/swagger/v1/swagger.json, Response status code: 404
+2025-09-16 16:58:46.0060|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using '/Users/selinan/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-09-16 16:58:46.1761|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7239
+2025-09-16 16:58:46.1761|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5233
+2025-09-16 16:58:46.1794|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-09-16 16:58:46.1799|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2025-09-16 16:58:46.1799|INFO|Microsoft.Hosting.Lifetime|Content root path: /Users/selinan/MyProject
+2025-09-16 16:58:50.8677|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7239/SWAGGER/index.html - - -
+2025-09-16 16:58:50.9123|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/SWAGGER/index.html - 200 - text/html;charset=utf-8 43.3407ms
+2025-09-16 16:58:50.9939|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - - -
+2025-09-16 16:58:51.0198|INFO|QrBankApi.Middlewares.LoggingMiddleware|[USER] anonymous
+2025-09-16 16:58:51.0198|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST] GET /swagger/v1/swagger.json
+2025-09-16 16:58:51.0210|INFO|QrBankApi.Middlewares.LoggingMiddleware|[RESPONSE] Status: 404
+2025-09-16 16:58:51.0216|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - 404 0 - 27.6067ms
+2025-09-16 16:58:51.0216|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7239/swagger/v1/swagger.json, Response status code: 404
+2025-09-16 16:58:53.4607|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7239/SWAGGER/index.html - - -
+2025-09-16 16:58:53.4618|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/SWAGGER/index.html - 200 - text/html;charset=utf-8 1.1514ms
+2025-09-16 16:58:53.5087|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - - -
+2025-09-16 16:58:53.5104|INFO|QrBankApi.Middlewares.LoggingMiddleware|[USER] anonymous
+2025-09-16 16:58:53.5105|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST] GET /swagger/v1/swagger.json
+2025-09-16 16:58:53.5105|INFO|QrBankApi.Middlewares.LoggingMiddleware|[RESPONSE] Status: 404
+2025-09-16 16:58:53.5105|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - 404 0 - 2.1478ms
+2025-09-16 16:58:53.5105|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7239/swagger/v1/swagger.json, Response status code: 404
+2025-09-16 16:59:04.0602|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7239/api/QrCode/generate - application/json 54
+2025-09-16 16:59:04.1130|INFO|Program|JWT validasyonu başarılı: celine
+2025-09-16 16:59:04.1137|INFO|QrBankApi.Middlewares.LoggingMiddleware|[USER] celine
+2025-09-16 16:59:04.1137|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST] POST /api/QrCode/generate
+2025-09-16 16:59:04.1184|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST BODY] {
+    "bankCode": "980015",
+    "atmCode": "123456"
+}
+
+2025-09-16 16:59:04.1233|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject)'
+2025-09-16 16:59:04.1411|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GenerateQr", controller = "QrCode"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GenerateQr(QrBankApi.Models.QrGenerateRequest) on controller QrBankApi.Controllers.QrCodeController (MyProject).
+2025-09-16 16:59:04.1974|INFO|QrBankApi.Controllers.QrCodeController|[GenerateQr] Kullanıcı: celine - Admin mi: True
+2025-09-16 16:59:04.1974|WARN|QrBankApi.Controllers.QrCodeController|[GenerateQr] Geçersiz QR: 
+2025-09-16 16:59:04.2001|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'QrBankApi.Models.QrGenerateResponse'.
+2025-09-16 16:59:04.2179|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject) in 71.5227ms
+2025-09-16 16:59:04.2179|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject)'
+2025-09-16 16:59:04.2179|INFO|QrBankApi.Middlewares.LoggingMiddleware|[RESPONSE] Status: 400
+2025-09-16 16:59:04.2185|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7239/api/QrCode/generate - 400 59 application/json;+charset=utf-8 158.1577ms
+2025-09-16 16:59:07.6423|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7239/api/QrCode/generate - application/json 54
+2025-09-16 16:59:07.6454|INFO|Program|JWT validasyonu başarılı: celine
+2025-09-16 16:59:07.6458|INFO|QrBankApi.Middlewares.LoggingMiddleware|[USER] celine
+2025-09-16 16:59:07.6458|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST] POST /api/QrCode/generate
+2025-09-16 16:59:07.6458|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST BODY] {
+    "bankCode": "980015",
+    "atmCode": "123456"
+}
+
+2025-09-16 16:59:07.6496|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject)'
+2025-09-16 16:59:07.6496|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GenerateQr", controller = "QrCode"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GenerateQr(QrBankApi.Models.QrGenerateRequest) on controller QrBankApi.Controllers.QrCodeController (MyProject).
+2025-09-16 16:59:07.6522|INFO|QrBankApi.Controllers.QrCodeController|[GenerateQr] Kullanıcı: celine - Admin mi: True
+2025-09-16 16:59:07.6522|WARN|QrBankApi.Controllers.QrCodeController|[GenerateQr] Geçersiz QR: 
+2025-09-16 16:59:07.6526|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'QrBankApi.Models.QrGenerateResponse'.
+2025-09-16 16:59:07.6526|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject) in 3.2948ms
+2025-09-16 16:59:07.6526|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject)'
+2025-09-16 16:59:07.6536|INFO|QrBankApi.Middlewares.LoggingMiddleware|[RESPONSE] Status: 400
+2025-09-16 16:59:07.6536|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7239/api/QrCode/generate - 400 59 application/json;+charset=utf-8 11.6392ms
+2025-09-16 17:01:52.8043|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using '/Users/selinan/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-09-16 17:01:52.9939|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7239
+2025-09-16 17:01:52.9939|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5233
+2025-09-16 17:01:52.9964|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-09-16 17:01:52.9969|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2025-09-16 17:01:52.9969|INFO|Microsoft.Hosting.Lifetime|Content root path: /Users/selinan/MyProject
+2025-09-16 17:01:56.7616|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7239/api/QrCode/generate - application/json 54
+2025-09-16 17:01:56.8203|INFO|Program|JWT validasyonu başarılı: celine
+2025-09-16 17:01:56.8221|INFO|QrBankApi.Middlewares.LoggingMiddleware|[USER] celine
+2025-09-16 17:01:56.8221|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST] POST /api/QrCode/generate
+2025-09-16 17:01:56.8242|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST BODY] {
+    "bankCode": "980015",
+    "atmCode": "123456"
+}
+
+2025-09-16 17:01:56.8267|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject)'
+2025-09-16 17:01:56.8384|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GenerateQr", controller = "QrCode"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GenerateQr(QrBankApi.Models.QrGenerateRequest) on controller QrBankApi.Controllers.QrCodeController (MyProject).
+2025-09-16 17:01:56.8909|INFO|QrBankApi.Controllers.QrCodeController|[GenerateQr] Kullanıcı: celine - Admin mi: True
+2025-09-16 17:01:56.8909|WARN|QrBankApi.Controllers.QrCodeController|[GenerateQr] Geçersiz QR: 
+2025-09-16 17:01:56.8936|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'QrBankApi.Models.QrGenerateResponse'.
+2025-09-16 17:01:56.9177|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject) in 69.5301ms
+2025-09-16 17:01:56.9177|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject)'
+2025-09-16 17:01:56.9177|INFO|QrBankApi.Middlewares.LoggingMiddleware|[RESPONSE] Status: 400
+2025-09-16 17:01:56.9212|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7239/api/QrCode/generate - 400 47 application/json;+charset=utf-8 160.4917ms
+2025-09-16 17:02:00.6986|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7239/api/QrCode/generate - application/json 54
+2025-09-16 17:02:00.7012|INFO|Program|JWT validasyonu başarılı: celine
+2025-09-16 17:02:00.7012|INFO|QrBankApi.Middlewares.LoggingMiddleware|[USER] celine
+2025-09-16 17:02:00.7012|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST] POST /api/QrCode/generate
+2025-09-16 17:02:00.7012|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST BODY] {
+    "bankCode": "980015",
+    "atmCode": "123456"
+}
+
+2025-09-16 17:02:00.7046|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject)'
+2025-09-16 17:02:00.7046|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GenerateQr", controller = "QrCode"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GenerateQr(QrBankApi.Models.QrGenerateRequest) on controller QrBankApi.Controllers.QrCodeController (MyProject).
+2025-09-16 17:02:00.7069|INFO|QrBankApi.Controllers.QrCodeController|[GenerateQr] Kullanıcı: celine - Admin mi: True
+2025-09-16 17:02:00.7069|WARN|QrBankApi.Controllers.QrCodeController|[GenerateQr] Geçersiz QR: 
+2025-09-16 17:02:00.7069|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'QrBankApi.Models.QrGenerateResponse'.
+2025-09-16 17:02:00.7076|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject) in 2.3672ms
+2025-09-16 17:02:00.7076|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject)'
+2025-09-16 17:02:00.7076|INFO|QrBankApi.Middlewares.LoggingMiddleware|[RESPONSE] Status: 400
+2025-09-16 17:02:00.7076|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7239/api/QrCode/generate - 400 47 application/json;+charset=utf-8 9.1992ms
+2025-09-16 17:02:11.8901|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7239/SWAGGER/index.html - - -
+2025-09-16 17:02:11.9455|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/SWAGGER/index.html - 200 - text/html;charset=utf-8 54.7391ms
+2025-09-16 17:02:12.0777|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - - -
+2025-09-16 17:02:12.0833|INFO|QrBankApi.Middlewares.LoggingMiddleware|[USER] anonymous
+2025-09-16 17:02:12.0833|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST] GET /swagger/v1/swagger.json
+2025-09-16 17:02:12.0844|INFO|QrBankApi.Middlewares.LoggingMiddleware|[RESPONSE] Status: 404
+2025-09-16 17:02:12.0844|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - 404 0 - 7.0507ms
+2025-09-16 17:02:12.0860|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7239/swagger/v1/swagger.json, Response status code: 404
+2025-09-16 17:05:49.6281|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7239/api/QrCode/generate - application/json 54
+2025-09-16 17:05:49.6310|INFO|Program|JWT validasyonu başarılı: celine
+2025-09-16 17:05:49.6311|INFO|QrBankApi.Middlewares.LoggingMiddleware|[USER] celine
+2025-09-16 17:05:49.6311|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST] POST /api/QrCode/generate
+2025-09-16 17:05:49.6311|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST BODY] {
+    "bankCode": "980015",
+    "atmCode": "123456"
+}
+
+2025-09-16 17:05:49.6358|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject)'
+2025-09-16 17:05:49.6367|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GenerateQr", controller = "QrCode"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GenerateQr(QrBankApi.Models.QrGenerateRequest) on controller QrBankApi.Controllers.QrCodeController (MyProject).
+2025-09-16 17:05:49.6419|INFO|QrBankApi.Controllers.QrCodeController|[GenerateQr] Kullanıcı: celine - Admin mi: True
+2025-09-16 17:05:49.6419|WARN|QrBankApi.Controllers.QrCodeController|[GenerateQr] Geçersiz QR: 
+2025-09-16 17:05:49.6421|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'QrBankApi.Models.QrGenerateResponse'.
+2025-09-16 17:05:49.6421|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject) in 5.6191ms
+2025-09-16 17:05:49.6421|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject)'
+2025-09-16 17:05:49.6421|INFO|QrBankApi.Middlewares.LoggingMiddleware|[RESPONSE] Status: 400
+2025-09-16 17:05:49.6432|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7239/api/QrCode/generate - 400 47 application/json;+charset=utf-8 15.2222ms
+2025-09-16 17:05:58.0437|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7239/api/QrCode/generate - application/json 54
+2025-09-16 17:05:58.0443|INFO|QrBankApi.Middlewares.LoggingMiddleware|[USER] anonymous
+2025-09-16 17:05:58.0443|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST] POST /api/QrCode/generate
+2025-09-16 17:05:58.0443|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST BODY] {
+    "bankCode": "980015",
+    "atmCode": "123456"
+}
+
+2025-09-16 17:05:58.0456|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-09-16 17:05:58.0504|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was challenged.
+2025-09-16 17:05:58.0504|INFO|QrBankApi.Middlewares.LoggingMiddleware|[RESPONSE] Status: 401
+2025-09-16 17:05:58.0508|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7239/api/QrCode/generate - 401 0 - 7.1529ms
+2025-09-16 17:06:07.1640|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - - -
+2025-09-16 17:06:07.1666|INFO|QrBankApi.Middlewares.LoggingMiddleware|[USER] anonymous
+2025-09-16 17:06:07.1667|INFO|QrBankApi.Middlewares.LoggingMiddleware|[REQUEST] GET /swagger/v1/swagger.json
+2025-09-16 17:06:07.1667|INFO|QrBankApi.Middlewares.LoggingMiddleware|[RESPONSE] Status: 404
+2025-09-16 17:06:07.1667|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - 404 0 - 3.4855ms
+2025-09-16 17:06:07.1678|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7239/swagger/v1/swagger.json, Response status code: 404
+2025-09-16 17:07:49.4403|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using '/Users/selinan/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-09-16 17:07:49.6005|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7239
+2025-09-16 17:07:49.6005|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5233
+2025-09-16 17:07:49.6027|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-09-16 17:07:49.6032|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2025-09-16 17:07:49.6032|INFO|Microsoft.Hosting.Lifetime|Content root path: /Users/selinan/MyProject
+2025-09-16 17:07:53.7295|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7239/SWAGGER/index.html - - -
+2025-09-16 17:07:53.7816|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/SWAGGER/index.html - 200 - text/html;charset=utf-8 50.7740ms
+2025-09-16 17:07:53.9233|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - - -
+2025-09-16 17:07:53.9466|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - 404 0 - 23.2192ms
+2025-09-16 17:07:53.9471|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7239/swagger/v1/swagger.json, Response status code: 404
+2025-09-16 17:07:55.1923|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7239/SWAGGER/index.html - - -
+2025-09-16 17:07:55.1937|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/SWAGGER/index.html - 200 - text/html;charset=utf-8 1.3252ms
+2025-09-16 17:07:55.2434|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - - -
+2025-09-16 17:07:55.2457|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - 404 0 - 2.2090ms
+2025-09-16 17:07:55.2457|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7239/swagger/v1/swagger.json, Response status code: 404
+2025-09-16 17:08:56.5333|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using '/Users/selinan/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-09-16 17:08:56.6961|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7239
+2025-09-16 17:08:56.6961|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5233
+2025-09-16 17:08:56.6989|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-09-16 17:08:56.6994|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2025-09-16 17:08:56.6994|INFO|Microsoft.Hosting.Lifetime|Content root path: /Users/selinan/MyProject
+2025-09-16 17:09:02.2129|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7239/SWAGGER/index.html - - -
+2025-09-16 17:09:02.2578|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/SWAGGER/index.html - 200 - text/html;charset=utf-8 42.1255ms
+2025-09-16 17:09:02.6911|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - - -
+2025-09-16 17:09:02.7126|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - 404 0 - 21.4253ms
+2025-09-16 17:09:02.7131|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7239/swagger/v1/swagger.json, Response status code: 404
+2025-09-16 17:12:28.1312|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using '/Users/selinan/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-09-16 17:12:28.3028|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7239
+2025-09-16 17:12:28.3028|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5233
+2025-09-16 17:12:28.3056|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-09-16 17:12:28.3056|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2025-09-16 17:12:28.3056|INFO|Microsoft.Hosting.Lifetime|Content root path: /Users/selinan/MyProject
+2025-09-16 17:12:32.6989|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7239/SWAGGER/index.html - - -
+2025-09-16 17:12:32.7502|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/SWAGGER/index.html - 200 - text/html;charset=utf-8 50.4027ms
+2025-09-16 17:12:32.9022|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - - -
+2025-09-16 17:12:32.9236|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - 404 0 - 21.3923ms
+2025-09-16 17:12:32.9243|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7239/swagger/v1/swagger.json, Response status code: 404
+2025-09-16 17:12:33.2871|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7239/SWAGGER/index.html - - -
+2025-09-16 17:12:33.2881|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/SWAGGER/index.html - 200 - text/html;charset=utf-8 0.9786ms
+2025-09-16 17:12:33.3444|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - - -
+2025-09-16 17:12:33.3472|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - 404 0 - 2.7544ms
+2025-09-16 17:12:33.3474|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7239/swagger/v1/swagger.json, Response status code: 404
+2025-09-16 17:16:40.7891|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using '/Users/selinan/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-09-16 17:16:41.0045|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7239
+2025-09-16 17:16:41.0045|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5233
+2025-09-16 17:16:41.0068|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-09-16 17:16:41.0073|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2025-09-16 17:16:41.0073|INFO|Microsoft.Hosting.Lifetime|Content root path: /Users/selinan/MyProject
+2025-09-16 17:16:47.2041|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7239/SWAGGER/index.html - - -
+2025-09-16 17:16:47.2635|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/SWAGGER/index.html - 200 - text/html;charset=utf-8 57.6820ms
+2025-09-16 17:16:47.3286|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - - -
+2025-09-16 17:16:47.3326|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - 404 0 - 3.9709ms
+2025-09-16 17:16:47.3332|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7239/swagger/v1/swagger.json, Response status code: 404
+2025-09-16 17:19:35.4146|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using '/Users/selinan/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-09-16 17:19:35.6135|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7239
+2025-09-16 17:19:35.6135|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5233
+2025-09-16 17:19:35.6164|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-09-16 17:19:35.6169|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2025-09-16 17:19:35.6169|INFO|Microsoft.Hosting.Lifetime|Content root path: /Users/selinan/MyProject
+2025-09-16 17:19:46.0919|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - - -
+2025-09-16 17:19:46.1977|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 102.9308ms
+2025-09-16 17:20:20.5648|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7239/api/QrCode/generate - application/json 54
+2025-09-16 17:20:20.5768|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-09-16 17:20:20.5793|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was challenged.
+2025-09-16 17:20:20.5810|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7239/api/QrCode/generate - 401 0 - 16.2424ms
+2025-09-16 17:21:12.7030|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using '/Users/selinan/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-09-16 17:21:12.8867|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7239
+2025-09-16 17:21:12.8867|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5233
+2025-09-16 17:21:12.8895|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-09-16 17:21:12.8895|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2025-09-16 17:21:12.8895|INFO|Microsoft.Hosting.Lifetime|Content root path: /Users/selinan/MyProject
+2025-09-16 17:21:36.8071|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7239/api/QrCode/generate - application/json 54
+2025-09-16 17:21:36.8469|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject)'
+2025-09-16 17:21:36.8541|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GenerateQr", controller = "QrCode"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GenerateQr(QrBankApi.Models.QrGenerateRequest) on controller QrBankApi.Controllers.QrCodeController (MyProject).
+2025-09-16 17:21:36.9113|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType3`2[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-16 17:21:36.9316|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject) in 69.045ms
+2025-09-16 17:21:36.9316|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'QrBankApi.Controllers.QrCodeController.GenerateQr (MyProject)'
+2025-09-16 17:21:36.9342|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7239/api/QrCode/generate - 401 60 application/json;+charset=utf-8 128.5121ms
+2025-09-16 17:28:13.5167|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7239/SWAGGER/index.html - - -
+2025-09-16 17:28:13.5800|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/SWAGGER/index.html - 200 - text/html;charset=utf-8 63.3983ms
+2025-09-16 17:28:13.7192|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - - -
+2025-09-16 17:28:13.8069|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 87.5825ms
+2025-09-16 17:37:28.9965|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7239/SWAGGER/index.html - - -
+2025-09-16 17:37:29.0059|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/SWAGGER/index.html - 200 - text/html;charset=utf-8 9.4345ms
+2025-09-16 17:37:29.1278|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - - -
+2025-09-16 17:37:29.1410|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 13.2014ms
+2025-09-17 13:07:35.2360|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7239/SWAGGER/index.html - - -
+2025-09-17 13:07:35.2578|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/SWAGGER/index.html - 200 - text/html;charset=utf-8 22.0940ms
+2025-09-17 13:07:35.5212|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - - -
+2025-09-17 13:07:35.5490|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 27.8102ms

@@ -1,26 +1,36 @@
+using Newtonsoft.Json;
+
 namespace QrBankApi.Models
 {
     public class QrGenerateResponse : BaseResponse
     {
-        public string QrCode { get; set; } = string.Empty;
-        public string Message { get; set; } = string.Empty;
-    }
+        [JsonProperty("qrCode", NullValueHandling = NullValueHandling.Ignore)]
+        public string? QrCode { get; set; }
 
-    public class QrValidateResponse : BaseResponse
-    {
-        public bool IsValid { get; set; }
-        public string Message { get; set; } = string.Empty;
+        [JsonProperty("message", NullValueHandling = NullValueHandling.Ignore)]
+        public string? Message { get; set; }
+
+        [JsonProperty("exceptionDetails", NullValueHandling = NullValueHandling.Ignore)]
+        public string? ExceptionDetails { get; set; }
+
+        public string QrImageBase64 { get; set; } = string.Empty;
     }
 
     public class QrWithdrawResponse : BaseResponse
     {
+        [JsonProperty("amount")]
         public decimal Amount { get; set; }
-        public string Message { get; set; } = "Para çekme işlemi başarılı";
+
+        [JsonProperty("message", NullValueHandling = NullValueHandling.Ignore)]
+        public string? Message { get; set; } = "Para çekme işlemi başarılı";
     }
 
     public class QrDepositResponse : BaseResponse
     {
+        [JsonProperty("amount")]
         public decimal Amount { get; set; }
-        public string Message { get; set; } = "Para yatırma işlemi başarılı";
+
+        [JsonProperty("message", NullValueHandling = NullValueHandling.Ignore)]
+        public string? Message { get; set; } = "Para yatırma işlemi başarılı";
     }
 }

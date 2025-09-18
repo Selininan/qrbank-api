@@ -13,6 +13,7 @@ namespace QrBankApi.Services.Abstractions
         // Withdraw & Deposit örnekte amount dönüyor (örnek basit string)
         string Withdraw(QrWithdrawRequest request);
         string Deposit(QrDepositRequest request);
+        string GenerateQrImageBase64(string qrCode);
 
         int CalculateCheckDigitForPayload(string payload);
     }

@@ -3,13 +3,17 @@ using System;
 using QrBankApi.Models;
 using QrBankApi.Services.Abstractions;
 using QrBankApi.Helpers;
+using QRCoder;
+using System.IO;
+using SkiaSharp;
+using System;
 
 namespace QrBankApi.Services.Implementations
 {
     public class QrService : IQrService
     {
         private readonly ICheckDigitHelper _checkDigitHelper;
-        private readonly IMemoryCache _cache; // ✅ MemoryCache eklendi
+        private readonly IMemoryCache _cache; //  MemoryCache eklendi
 
         public QrService(ICheckDigitHelper checkDigitHelper, IMemoryCache cache)
         {
@@ -17,20 +21,36 @@ namespace QrBankApi.Services.Implementations
             _cache = cache;
         }
 
+   
+
+        public string GenerateQrImageBase64(string qrCodeText)
+        {
+            if (string.IsNullOrWhiteSpace(qrCodeText))
+                return string.Empty;
+
+            using var qrGenerator = new QRCodeGenerator();
+            using var qrData = qrGenerator.CreateQrCode(qrCodeText, QRCodeGenerator.ECCLevel.Q);
+
+            using var qrCode = new PngByteQRCode(qrData);
+            byte[] qrBytes = qrCode.GetGraphic(20); // 20 pixel scale
+
+            return Convert.ToBase64String(qrBytes);
+        }
+
         public string Generate(QrGenerateRequest request)
         {
             if (request == null) throw new ArgumentNullException(nameof(request));
 
-            // ✅ Cache key: BankCode + AtmCode + Amount (veya request’te seni eşsiz tanımlayacak alanlar)
+            //  Cache key: BankCode + AtmCode + Amount (veya request’te seni eşsiz tanımlayacak alanlar)
             string cacheKey = $"{request.BankCode}_{request.AtmCode}";
 
-            // 1️⃣ Önce cache’de var mı kontrol et
+            // 1️ Önce cache’de var mı kontrol et
             if (_cache.TryGetValue(cacheKey, out string cachedQr))
             {
                 return cachedQr; // Cache’de varsa direkt dön
             }
 
-            // 2️⃣ Yoksa yeni QR üret
+            // 2️ Yoksa yeni QR üret
             string transactionId = Guid.NewGuid().ToString("N");
             string transactionDate = DateTime.Now.ToString("yyyyMMddHHmmss");
 
@@ -39,7 +59,7 @@ namespace QrBankApi.Services.Implementations
 
             string qrCode = $"{qrPayload}|{checkDigit:D2}";
 
-            // 3️⃣ Cache’e koy (örn. 5 dakika geçerli olsun)
+            // 3️ Cache’e koy (örn. 5 dakika geçerli olsun)
             _cache.Set(cacheKey, qrCode, TimeSpan.FromMinutes(5));
 
             return qrCode;

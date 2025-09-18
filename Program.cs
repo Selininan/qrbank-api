@@ -6,8 +6,13 @@ using QrBankApi.Middlewares; // LoggingMiddleware namespace
 using QrBankApi.Services.Abstractions;
 using QrBankApi.Helpers;
 using QrBankApi.Services.Implementations;
+using QrBankApi.Services;
 using FluentValidation.AspNetCore;
 using NLog.Web;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
+using Microsoft.Extensions.Caching.Memory;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -68,10 +73,20 @@ builder.Services.AddAuthorization(options =>
 });
 
 // -------------------------
-// Controllers + FluentValidation
+// Controllers + FluentValidation + NewtonsoftJson
 // -------------------------
 builder.Services.AddControllers()
-    .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<Program>());
+    .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<Program>())
+    .AddNewtonsoftJson(options =>
+    {
+        options.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
+    });
+
+// -------------------------
+// Swagger
+// -------------------------
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 // -------------------------
 // Dependency Injection
@@ -79,12 +94,7 @@ builder.Services.AddControllers()
 builder.Services.AddMemoryCache();
 builder.Services.AddSingleton<ICheckDigitHelper, CheckDigitHelper>();
 builder.Services.AddScoped<IQrService, QrService>();
-
-// -------------------------
-// Swagger
-// -------------------------
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IValidateQrService, ValidateQrService>();
 
 // -------------------------
 // Build App
@@ -94,23 +104,44 @@ var app = builder.Build();
 // -------------------------
 // HTTP Pipeline
 // -------------------------
+app.UseHttpsRedirection();
+app.UseAuthentication();
+// app.UseMiddleware<LoggingMiddleware>(); // İstersen açabilirsin
+app.UseAuthorization();
+
+// Swagger middleware
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
-    app.UseSwagger();
+    app.UseSwagger(); // JSON endpoint için gerekli
     app.UseSwaggerUI(c =>
     {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
-        c.RoutePrefix = "swagger";
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+        c.RoutePrefix = "swagger"; // UI için https://localhost:7239/swagger/
     });
 }
 
-app.UseHttpsRedirection();
+// MemoryCache için gerekli
+var memoryCache = new MemoryCache(new MemoryCacheOptions());
 
-// 🔹 Sıralama çok önemli
-app.UseAuthentication();              // 1️⃣ JWT doğrulama
-app.UseMiddleware<LoggingMiddleware>(); // 2️⃣ Logging
-app.UseAuthorization();               // 3️⃣ Role/Policy
+// CheckDigitHelper sınıfını kendi projenle eşleştir
+var checkDigitHelper = new CheckDigitHelper();
+
+// QrService’i oluştur
+var qrService = new QrService(checkDigitHelper, memoryCache);
+
+// Test QR kodunu üret
+string qrBase64 = qrService.GenerateQrImageBase64("TEST12345");
+
+// Base64 → byte[]
+byte[] qrBytes = Convert.FromBase64String(qrBase64);
+
+// PNG dosyası olarak kaydet
+string filePath = "qr_test.png";
+File.WriteAllBytes(filePath, qrBytes);
+
+Console.WriteLine($"QR kodu {filePath} olarak kaydedildi!");
+
 
 app.MapControllers();
 
