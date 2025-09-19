@@ -88,6 +88,10 @@ builder.Services.AddControllers()
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+// Atm Dependency Injection
+builder.Services.AddSingleton<IAtmCache, AtmCache>();
+
 // -------------------------
 // Dependency Injection
 // -------------------------

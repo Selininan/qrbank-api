@@ -41,29 +41,23 @@ namespace QrBankApi.Services.Implementations
         {
             if (request == null) throw new ArgumentNullException(nameof(request));
 
-            //  Cache key: BankCode + AtmCode + Amount (veya request’te seni eşsiz tanımlayacak alanlar)
-            string cacheKey = $"{request.BankCode}_{request.AtmCode}";
+            // 1️ Her generate isteğinde uniq cache key
+            string uniqueKey = Guid.NewGuid().ToString("N");
+            string cacheKey = $"{request.BankCode}_{request.AtmCode}_{uniqueKey}";
 
-            // 1️ Önce cache’de var mı kontrol et
-            if (_cache.TryGetValue(cacheKey, out string cachedQr))
-            {
-                return cachedQr; // Cache’de varsa direkt dön
-            }
-
-            // 2️ Yoksa yeni QR üret
+            // 2️ QR payload oluştur
             string transactionId = Guid.NewGuid().ToString("N");
             string transactionDate = DateTime.Now.ToString("yyyyMMddHHmmss");
-
             string qrPayload = $"{request.BankCode}{request.AtmCode}{transactionId}{transactionDate}";
             int checkDigit = _checkDigitHelper.CalculateCheckDigit(qrPayload);
+            string qrCode = $"{qrPayload}{checkDigit:D2}";
 
-            string qrCode = $"{qrPayload}|{checkDigit:D2}";
-
-            // 3️ Cache’e koy (örn. 5 dakika geçerli olsun)
-            _cache.Set(cacheKey, qrCode, TimeSpan.FromMinutes(5));
+            // 3️ Cache’e ekle (örn. 2 dakika geçerli)
+            _cache.Set(cacheKey, new { Request = request, QrCode = qrCode }, TimeSpan.FromMinutes(2));
 
             return qrCode;
         }
+
 
         public bool Validate(QrValidateRequest request)
         {

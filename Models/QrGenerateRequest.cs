@@ -11,6 +11,8 @@ namespace QrBankApi.Models
 
         [JsonProperty("BankCode")]
         public string BankCode { get; set; }
+
+    
     }
 
     public class QrGenerateRequestValidator : AbstractValidator<QrGenerateRequest>
